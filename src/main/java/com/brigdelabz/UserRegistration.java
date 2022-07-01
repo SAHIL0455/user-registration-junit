@@ -30,5 +30,6 @@ public class UserRegistration<T> {
 
     public static void main(String[] args) {
         System.out.println("Welcome to junit");
+
     }
 }
