@@ -11,7 +11,7 @@ public class UserRegistrationTest {
     @Test
     public void validateFirstNameTest() {
         try {
-            boolean actual1 = userRegistration.validateFirstName("Rohit1");
+            boolean actual1 = userRegistration.validateFirstName.validate("Rohit1");
             Assert.assertTrue(actual1);
         } catch (InvalidInputExceptionError e) {
             System.out.println(e);
@@ -21,7 +21,7 @@ public class UserRegistrationTest {
     @Test
     public void validateLastNameTest() {
         try {
-            boolean actual1 = userRegistration.validateLastName("Sharma.");
+            boolean actual1 = userRegistration.validateLastName.validate("Sharma.");
             Assert.assertTrue(actual1);
         } catch (InvalidInputExceptionError e) {
             System.out.println(e);
@@ -31,7 +31,7 @@ public class UserRegistrationTest {
     @Test
     public void validateEmailTest() {
         try {
-            boolean actual1 = userRegistration.validateEmail("abc-100@yahoo.com");
+            boolean actual1 = userRegistration.validateEmail.validate("abc-100@yahoo.com");
             Assert.assertTrue(actual1);
         } catch (InvalidInputExceptionError e) {
             System.out.println(e);
@@ -41,7 +41,7 @@ public class UserRegistrationTest {
     @Test
     public void validateMobileTest() {
         try {
-            boolean actual1 = userRegistration.validateMobile("7350310455");
+            boolean actual1 = userRegistration.validateMobile.validate("7350310455");
             Assert.assertTrue(actual1);
         } catch (InvalidInputExceptionError e) {
             System.out.println(e);
@@ -51,7 +51,7 @@ public class UserRegistrationTest {
     @Test
     public void validatePasswordTest() {
         try {
-            boolean actual1 = userRegistration.validatePassword("Sahil@1233");
+            boolean actual1 = userRegistration.validatePassword.validate("Sahil@1233");
             Assert.assertTrue(actual1);
         }catch (InvalidInputExceptionError e){
             System.out.println(e);
@@ -71,7 +71,7 @@ public class UserRegistrationTest {
             list.add("abc@gmail.com.com");
             list.add("abc+100@gmail.com");
             for (int i = 0; i < list.size(); i++) {
-                boolean result = userRegistration.validateEmail(list.get(i));
+                boolean result = userRegistration.validateEmail.validate(list.get(i));
                 Assert.assertTrue(result);
             }
         }catch (InvalidInputExceptionError e){
